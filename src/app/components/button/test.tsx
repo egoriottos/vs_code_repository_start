@@ -53,28 +53,28 @@ const test = () =>{
     ]
     return(
         <>
-            <table className='table border rounded bg-amber-200 items-center w-full mt-20'>
+            <table>
                 <thead>
-                    <tr className="content-center">
-                        <th className="border'">ID</th>
-                        <th className="border">TITLE</th>
-                        <th className="border">DESCRIPTION</th>
-                        <th className="border">PRICE</th>
-                        <th className="border">ENGINE POWER</th>
+                    <tr>
+                        <th>ID</th>
+                        <th>TITLE</th>
+                        <th>DESCRIPTION</th>
+                        <th>PRICE</th>
+                        <th>ENGINE POWER</th>
                     </tr>
                 </thead>
-                <tbody className="content-center rounded">
+                <tbody>
                 {testObj.map(item => {
 						return (
 							<>
 								<tr>
 									<td className='border'>
-										<Link href={`/${item.id}`}>{item.id}</Link>
+										<Link href={`/cars/${item.id}`}>{item.id}</Link>
 									</td>
-									<td className='border text-center'>{item.name}</td>
-									<td className='border text-center'>{item.description}</td>
-                  <td className='border text-center'>{item.price}</td>
-                  <td className='border text-center'>{item.engine_power}</td>
+									<td className='border'>{item.name}</td>
+									<td className='border'>{item.description}</td>
+                                    <td className='border'>{item.price}</td>
+                                    <td className='border'>{item.engine_power}</td>
 								</tr>
 							</>
 						)
@@ -85,8 +85,3 @@ const test = () =>{
     )
 }
 export default test
-
-
-
-
-
